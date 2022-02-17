@@ -1,0 +1,2 @@
+import jpgtopdf
+jpgtopdf.jpgtopdf()

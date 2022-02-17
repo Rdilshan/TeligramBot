@@ -1,5 +1,4 @@
 import telebot
-import os
 from PIL import Image
 
 bot = telebot.TeleBot("5112955026:AAEzQR96ek3WxmLaVEDQbNi3KxHNBSjXBTw")
@@ -22,9 +21,9 @@ def photo(message):
     file_info = bot.get_file(fileID)
 
     downloaded_file = bot.download_file(file_info.file_path)
-    bot.send_document(message.chat.id, Image.open(file_info.file_path).convert('RGB'))
+    bot.send_photo(message.chat.id, downloaded_file)
 
 
-
+print("Run")
 
 bot.polling()
